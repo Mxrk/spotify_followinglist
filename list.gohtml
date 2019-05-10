@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        .picture{
+            height: 50px;
+            width: 50px;
+        }
+    </style>
+    <title>List following</title>
+</head>
+<body>
+    <ul>
+            {{range .}}
+            <li>{{.Name}}  <img src="{{(index .Images 0).URL}}" class="picture"></li>
+           
+            {{end}}
+    </ul>
+
+    <form action="/">
+        <input type="submit" value="Go back" />
+    </form>
+ 
+</body>
+</html>
